@@ -1,0 +1,190 @@
+
+
+var x = document.getElementById("myAudio");
+const hide = document.querySelectorAll("hide");
+
+  function playAudio() { 
+  var playBtn = document.getElementById("playBtn"); 
+    x.play();
+    playBtn.classList.add("hide"); 
+  } 
+
+
+
+const semicircle = document.querySelectorAll('.semicircle');
+
+
+if(localStorage.getItem("count_timer1")){
+    var count_timer1 = localStorage.getItem("count_timer1");
+} else {
+    var count_timer1 = 60*60;
+}
+
+
+var minutes = parseInt(count_timer1/60);
+var seconds = parseInt(count_timer1%60);
+function countDownTimer(){
+    if(seconds < 10){
+        seconds= "0"+ seconds ;
+    }if(minutes < 10){
+        minutes= "0"+ minutes ;
+}
+
+    document.getElementById("total-time-left").innerHTML = " " + minutes + ":" + seconds;
+    if(count_timer1 <= 0){
+         semicircle[2].style.display = 'none';
+         semicircle[0].style.display = 'none';
+         semicircle[1].style.display = 'none';
+         localStorage.clear("count_timer1");
+         
+    } else {
+        count_timer1 = count_timer1 -1 ;
+        minutes = parseInt(count_timer1/60);
+        seconds = parseInt(count_timer1%60);
+        localStorage.setItem("count_timer1",count_timer1);
+        setTimeout("countDownTimer()",1000);
+    }
+
+
+
+
+const starTime = Date.now();
+const futureTime = starTime + count_timer1;
+const currentTime = Date.now();
+const remainingTime = futureTime - currentTime;
+const angle = (count_timer1)/(60*60) * 360;
+
+
+if(angle > 180){
+  semicircle[2].style.display = 'none';
+  semicircle[0].style.transform = `rotate(180deg)`;
+  semicircle[1].style.transform = `rotate(${angle}deg)`;
+
+} else {
+  semicircle[2].style.display = 'block';
+  semicircle[0].style.transform = `rotate(${angle}deg)`;
+  semicircle[1].style.transform = `rotate(${angle}deg)`;
+}
+
+
+if(angle < 180) {  
+  semicircle[0].style.backgroundColor = "GoldenRod";
+  semicircle[1].style.backgroundColor = "GoldenRod";
+} 
+
+if(angle < 90){
+  semicircle[0].style.backgroundColor = "DarkRed";
+  semicircle[1].style.backgroundColor = "DarkRed";
+}
+}
+
+
+
+setTimeout("countDownTimer()",1000);
+
+
+
+const next1 = document.getElementById("next1");
+const textBox1 = document.getElementById("textBox1");
+const textBox2 = document.getElementById("textBox2");
+const textBox3 = document.getElementById("textBox3");
+const textBox4 = document.getElementById("textBox4");
+const homepage = document.getElementById("homepage");
+const bag = document.getElementById("bag");
+const inventory = document.getElementById("inventory");
+const textBtn = document.getElementById("textBtn");
+const textBtn1 = document.getElementById("textBtn1");
+const textBtn2 = document.getElementById("textBtn2");
+const textBtn3 = document.getElementById("textBtn3");
+const password2 = document.getElementById("password2").value;
+const password3 = document.getElementById("password3").value;
+const password4 = document.getElementById("password4").value;
+const sword = document.getElementById("sword");
+const map = document.getElementById("map");
+const inventoryChilds = inventory.childNodes;
+var elements = document.getElementsByClassName("inventory-hide");
+
+
+
+
+homepage.addEventListener("click", () => {
+    if (textBox1.style.display == 'none') {
+        textBox1.style.display = 'block';
+    } else {
+        textBox1.style.display = 'none';
+    }
+
+    if (textBox2.style.display == 'block') {
+        textBox2.style.display = 'none';
+    }
+    if (textBox3.style.display == 'block') {
+        textBox3.style.display = 'none';
+    }
+    if (textBox4.style.display == 'block') {
+        textBox4.style.display = 'none';
+    }
+});
+
+bag.addEventListener("click", () => {
+    if (inventory.style.display == 'none') {
+        inventory.style.display = 'block';
+    } else {
+        inventory.style.display = 'none';
+    }
+});
+
+inventoryChilds[1].addEventListener("click", () => {
+    if (sword.style.display == 'none') {
+        sword.style.display = 'block';
+    } else {
+        sword.style.display = 'none';
+    }
+});
+
+
+
+elements[0].addEventListener("click", () => {
+ if (map.style.display == 'none') {
+        map.style.display = 'block';
+    } else {
+        map.style.display = 'none';
+    }
+});
+
+
+textBtn.addEventListener("click", () => {
+  const password2 = document.getElementById("password2").value;
+  if (password2 == "durin") 
+   textBox1.style.display = 'none';
+   textBox2.style.display = 'block';
+});
+
+textBtn1.addEventListener("click", () => {
+    if (textBox2.style.display == 'block') {
+        textBox2.style.display = 'none';
+        textBox3.style.display = 'block';
+    }
+    elements[0].style.display = "block";
+});
+
+
+
+textBtn2.addEventListener("click", () => {
+  const password3 = document.getElementById("password3").value;
+  if (password3 == "mithril forge"){ 
+   textBox3.style.display = 'none';
+   textBox4.style.display = 'block';
+}
+});
+
+textBtn3.addEventListener("click", () => {
+  const password4 = document.getElementById("password4").value;
+  if (password4 == "chamber of mazarbul") {
+   textBox4.style.display = 'none';
+   {next1.disabled = false};
+}
+});
+
+
+
+  

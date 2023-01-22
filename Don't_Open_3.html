@@ -1,0 +1,238 @@
+<title>TIMER</title>
+<head>
+   <link href:'./style.css' rel:'stylesheet'>
+  <title>Basic Web Page</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="style.css" rel="stylesheet">
+</head> 
+
+<header >
+<div>
+  <div class="move-left">
+   <div class="circle-container center">
+     <div class="semicircle"></div>
+     <div class="semicircle"></div>
+     <div class="semicircle"></div>
+     <div class="outermost-circle"></div>
+     <div class="timer-container center"> 
+       <div id="total-time-left" class="timer center"> </div>
+    </div>
+  </div>
+  </div>
+
+<div class="container">
+  <h1>Step Progress Bar</h1>
+  <div class="center">
+  <div class="progress-container">
+    <div class="progress" id="progress"></div>
+      <div class="circle active fa-1">1</div>
+      <div class="circle active fa-2">2</div>
+      <div class="circle active fa-3">3</div>
+      <div class="circle fa-3">4</div>
+      <div class="circle fa-3">5</div>
+  </div>
+  </div>
+
+  <a id="link" href="./Don't_Open_2.html"><button class="btn" id="prev" >Prev</button></a>
+  <a id="link" href="./Don't_Open_4.html"><button class="btn" id="next" disabled>Next</button></a>
+</div>
+
+<img src="./images/logo.jpg" class="image-logo center"/>
+
+</div>
+</header>
+
+<main class='image_4'>
+
+<audio id="myAudio" src="music/30_erebor_90secclip.mp3" loop></audio>
+<button class="playBtn" id="playBtn" onclick="playAudio()">Stage 3</button>
+
+  <button class="homepageBtn" id="homepage"></button> 
+
+  <p class='bag-text-1'>Inventory</p>
+  <img src="images/bag-PhotoRoom-removebg-preview.png" alt="alt text" class="bag-1" id="bag";/>
+  <img src="images/sword1.png" alt="alt text" class="sword" id="sword";/>
+  <img src="images/khazadum_map.jpg" alt="alt text" class="map" id="map";/>
+  <img src="images/dwarf1.png" alt="alt text" class="dwarf" id="dwarf";/>
+
+
+
+</main>
+<body align="center">
+  <div class="scroll-div" id="textBox1">
+    <h1>Scripture<h1>
+    <div class="scroll-object">
+When you walk north through the Mithril Forges and into the Chamber of Mazarbul you meet many dwarves and all are kind. 
+A bit suspicious, but as long you are no orc it's alright. In the Chamber of Mazarbul you see a beautiful painting along with its scripture.
+
+
+The Fathers of the Dwarves were the first of their race.
+<br><br>
+
+The eldest of all, Durin, lay alone at Mount Gundabad in the north of the Misty Mountains. 
+He later founded the line of the Longbeards, the Dwarves which were most friendly to the Elves and Men, mostly referred to as Durin's Folk. 
+He founded Khazad-dûm.
+<br><br>
+
+Two others were laid to rest in the Ered Luin or Blue Mountains, 
+and they founded the lines of the Broadbeams and the Firebeards who later lived in Nogrod and Belegost. 
+The other four Fathers of the Dwarves were laid to rest in two pairs in Rhûn; lands at least as far east of Mount Gundabad as it lay east of the Blue Mountains. 
+They founded the lines of the Ironfists, Stiffbeards, Blacklocks, and Stonefoots.
+
+<br><br>
+
+Durin lived to a great age, even by the measure of the Dwarves, 
+until he was known as -the Deathless-. The Longbeards believed that Durin would return seven times, and each time he will again be named Durin and reign as King.
+<br><br>
+
+<button class="btn" id="textBtn">Continue</button>
+    </div>
+  </div>
+
+
+
+
+  <div class="scroll-div" id="textBox2">
+    <div class="scroll-object">
+The world was young, the mountains green,<br>
+No stain yet on the Moon was seen,<br>
+No words were laid on stream or stone,<br>
+When Durin woke and walked alone.<br>
+He named the nameless hills and dells,<br>
+He drank from yet untasted wells,<br>
+He stooped and looked in Mirrormere,<br>
+And saw a crown of stars appear,<br>
+As gems upon a silver thread,<br>
+Above the shadow of his head.<br><br>
+The world was fair, the mountains tall, <br>
+In Elder Days before the fall<br> 
+Of mighty Kings in Nargothrond,<br>
+And Gondolin, who now beyond<br> 
+The Western Seas have passed away. <br>
+The world was fair in Durin's Day.<br><br>
+A king he was on carven throne<br>
+In many-pillared halls of stone<br>
+With golden roof and silver floor,<br>
+And runes of power upon the door. <br>
+The light of sun and star and moon<br>
+In shining lamps of crystal hewn<br>
+Undimmed by cloud or shade of night<br>
+There shown forever far and bright.
+<br><br>
+
+<button class="btn" id="textBtn1">Close</button>
+
+    </div>
+  </div>
+
+  <div class="scroll-div-NoScroll" id="textBox3">
+    <div class="scroll-object">
+Ishkhaqwi ai durugnul!
+<br><br>
+
+<button class="btn" id="textBtn2">Hi!</button>
+
+    </div>
+  </div>
+
+ <div class="scroll-div-NoScroll" id="textBox4">
+    <div class="scroll-object">
+What do you mean by hi? Do you know what I just said?
+<br><br>
+
+<button class="btn" id="textBtn3">No, I don't?</button>
+
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+ <div class="scroll-div-NoScroll" id="textBox5">
+    <div class="scroll-object">
+You're a naive one, i guess. Wandering in here. I'm sorry, I just said I will piss on your grave. I not very fond of the kins of you. 
+You're all thieves lurking around trying to steal our riches, and you know nothing of our culture. I bet that you even can't answer two simple questions. 
+<br><br>
+If you get them all correct I give you this little bag of gold. If you do not succed I will throw you to the orc down the lower levels.
+<br><br>
+
+<button class="btn" id="textBtn4">Okey</button>
+
+    </div>
+  </div>
+
+<div class="scroll-div-NoScroll" id="textBox6">
+    <div class="scroll-object">
+Were did the one that lay alone see his crown that shone upon?
+<br><br>
+<input type="text" class="input" id="password1">
+<br><br>
+
+<button class="btn" id="textBtn5">Answer</button>
+
+    </div>
+  </div>
+
+<div class="scroll-div-NoScroll" id="textBox7">
+    <div class="scroll-object">
+He who visit Mirromere, what's his emblem we all love and share?
+<br><br>
+<input type="text" class="input" id="password2" value="_____and____" onfocus= "clearInput(this)">
+<br><br>
+
+<button class="btn" id="textBtn6">Answer</button>
+
+    </div>
+  </div>
+
+<div class="scroll-div" id="textBox8">
+    <div class="scroll-object">
+There hammer on the anvil smote,<br>
+There chisel clove, and graver wrote;<br>
+There forged was blade, and bound was hilt;<br>
+The delver mined, the mason built.<br>
+There beryl, pearl, and opal pale,<br>
+And metal wrought like fishes' mail,<br>
+Buckler and corslet, axe and sword,<br>
+And shining spears were laid in hoard.<br><br>
+
+Unwearied then were Durin's folk;<br>
+Beneath the mountains music woke:<br>
+The harpers harped, the minstrels sang,<br>
+And at the gates the trumpets rang.<br>
+
+The world is grey, the mountains old,<br>
+The forge's fire is ashen-cold;<br>
+No harp is wrung, no hammer falls:<br>
+The darkness dwells in Durin's halls;<br>
+The shadow lies upon his tomb<br>
+In Moria, in Khazad-dûm.<br>
+But still the sunken stars appear<br>
+In dark and windless Mirrormere;<br>
+There lies his crown in water deep,<br>
+Till Durin wakes again from sleep.
+
+    </div>
+  </div>
+
+    <nav>
+    <ul class="inventory-1" id="inventory">
+      <li><a class="inventory-text" id="inventory-sword">Sword</a></li>
+      <br>
+      <li><a class="inventory-text inventory-open" id="inventory-map">Map</a></li>
+      <br>
+      <li><a class="inventory-text inventory-hide ">Gold</a></li>
+      <br>
+      <li><a class="inventory-text inventory-hide note"  >Note</a></li>
+    </ul>
+  </nav>
+
+
+
+<script src="script-three.txt"></script>
+
+
+  
+
+
+</html>

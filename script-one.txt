@@ -1,0 +1,21 @@
+var x = document.getElementById("myAudio");
+const hide = document.querySelectorAll("hide");
+
+  function playAudio() { 
+  var playBtn = document.getElementById("playBtn"); 
+    x.play();
+    playBtn.classList.add("hide"); 
+  } 
+
+const info = document.getElementById("info");
+const homepage = document.getElementById("infoBtn");
+
+
+
+infoBtn.addEventListener("click", () => {
+    if (info.style.display == 'none') {
+        info.style.display = 'block';
+    } else {
+        info.style.display = 'none';
+    }
+});

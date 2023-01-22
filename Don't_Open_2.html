@@ -1,0 +1,166 @@
+<title>TIMER</title>
+<head>
+   <link href:'./style.css' rel:'stylesheet'>
+  <title>Basic Web Page</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="style.css" rel="stylesheet">
+</head> 
+
+<header >
+<div>
+  <div class="move-left">
+   <div class="circle-container center">
+     <div class="semicircle"></div>
+     <div class="semicircle"></div>
+     <div class="semicircle"></div>
+     <div class="outermost-circle"></div>
+     <div class="timer-container center"> 
+       <div id="total-time-left" class="timer center"> </div>
+    </div>
+  </div>
+  </div>
+
+<div class="container">
+  <h1>Step Progress Bar</h1>
+  <div class="center">
+  <div class="progress-container">
+    <div class="progress" id="progress"></div>
+      <div class="circle active fa-1">1</div>
+      <div class="circle active fa-2">2</div>
+      <div class="circle fa-3">3</div>
+      <div class="circle fa-3">4</div>
+      <div class="circle fa-3">5</div>
+  </div>
+  </div>
+
+  <a id="link" href="./Don't_Open_1_Open.html"><button class="btn" id="next" >Prev</button></a>
+  <a id="link" href="./Don't_Open_3.html"><button class="btn" id="next1" disabled>Next</button></a>
+</div>
+
+<img src="./images/logo.jpg" class="image-logo center"/>
+
+</div>
+</header>
+
+<main class='image_2'>
+
+<audio id="myAudio" src="music/khazadum.mp3" loop></audio>
+<button class="playBtn" id="playBtn" onclick="playAudio()">Stage 2</button>
+
+  <button class="homepageBtn" id="homepage"></button> 
+
+  <p class='bag-text'>Inventory</p>
+  <img src="images/bag-PhotoRoom-removebg-preview.png" alt="alt text" class="bag" id="bag";/>
+  <img src="images/sword1.png" alt="alt text" class="sword" id="sword";/>
+  <img src="images/khazadum_map.jpg" alt="alt text" class="map" id="map";/>
+
+
+</main>
+<body align="center">
+  <div class="scroll-div" id="textBox1">
+    <h1>Entrance<h1>    
+    <div class="scroll-object">
+The door has open and you've walked in. There is no light and you hear no sound.  
+Deep in it's pitch black but in the hallway you see an opening in the wall to the right. 
+There within lays a big metal box, but the box has a code lock on it.
+The inscription on the box says:
+<br><br>
+
+For thee whom mellon is, help there is to find. Speak his name, for the father is kind.
+
+<br><br>
+
+<input type="text" class="input" id="password2">
+
+<br><br>
+
+<button class="btn" id="textBtn">Open</button>
+    </div>
+  </div>
+
+
+
+
+  <div class="scroll-div" id="textBox2">
+    <div class="scroll-object">
+The box has opened! In the box you see a pile of maps, torches, and a note:
+<br><br>
+
+If you read this, please be aware. We lived in peace for a long time, 
+but nothing last forever. We tried to hold them back, but we could not. We were overrun by orcs. We who speak of Khuzdul still live in Khaza-dum, 
+but we are not alone. The southern parts of Khaza-dum were given up and the northern were kept. Take a torch and a map. Please be safe.
+<br><br>
+
+*You take on of each and lock the box again.
+
+
+<br><br>
+<button class="btn" id="textBtn1">Collect</button>
+
+    </div>
+  </div>
+
+
+ <div class="scroll-div" id="textBox3">  
+    <div class="scroll-object">
+Khazad-dûm was a huge array of chambers, passages, mines, halls, stores and pits. In general, areas were either classed as mines or city. 
+The mines were working sections of Khazad-dûm whilst the city was the area of habitation.
+<br><br>
+
+The city areas of Khazad-dûm were clustered primarily to the east; these were the oldest parts of the kingdom and had access to the Great Gates. 
+They were structured into seven Levels and seven Deeps. The Levels stretched above the gate whilst the Deeps were set deeper within the mountain 
+below the level of the East-gate. It is possible that the First Level (on which the Great Gates were set) and the First Deep were highly intertwined.
+<br><br>
+
+The eastern section of the city spaces had also been delved in such a manner as to have light shafts to illuminate their chambers. 
+One example of this is the Chamber of Mazarbul which was located on the eastern edge of the Seventh Level.
+<br><br>
+
+Follow the map but be aware of the trolls and orcs. Find the path to the Eastern gate. First you have to go through:
+
+<br><br>
+
+<input type="text" class="input" id="password3">
+
+<br><br>
+
+<button class="btn" id="textBtn2">Walk</button>
+    </div>
+  </div>
+
+
+
+  <div class="scroll-div" id="textBox4">  
+    <div class="scroll-object">
+Then up high you go, to the:
+<br><br>
+
+<input type="text" class="input" id="password4">
+
+<br><br>
+
+<button class="btn" id="textBtn3">Walk</button>
+    </div>
+  </div>
+
+
+    <nav>
+    <ul class="inventory" id="inventory">
+      <li><a class="inventory-text" id="inventory-sword">Sword</a></li>
+      <br>
+      <li><a class="inventory-text inventory-hide" id="inventory-map">Map</a></li>
+      <br>
+      <li><a href="" class="inventory-text inventory-hide ">Gold</a></li>
+      <br>
+      <li><a href="" class="inventory-text inventory-hide ">Note</a></li>
+    </ul>
+  </nav>
+
+
+<script src="script-two.txt"></script>
+
+
+  
+
+
+</html>

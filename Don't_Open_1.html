@@ -1,0 +1,119 @@
+   <title>TIMER</title>
+<head>
+   <link href:'./style.css' rel:'stylesheet'>
+  <title>Basic Web Page</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="style.css" rel="stylesheet">
+</head> 
+
+<header >
+<div>
+  <div class="move-left">
+   <div class="circle-container center">
+     <div class="semicircle"></div>
+     <div class="semicircle"></div>
+     <div class="semicircle"></div>
+     <div class="outermost-circle"></div>
+     <div class="timer-container center"> 
+       <div id="total-time-left" class="timer center"> </div>
+    </div>
+  </div>
+  </div>
+
+<div class="container">
+  <h1>Step Progress Bar</h1>
+  <div class="center">
+  <div class="progress-container">
+    <div class="progress" id="progress"></div>
+      <div class="circle active fa-1">1</div>
+      <div class="circle fa-2">2</div>
+      <div class="circle fa-3">3</div>
+      <div class="circle fa-3">4</div>
+      <div class="circle fa-3">5</div>
+  </div>
+  </div>
+
+  <button class="btn" id="prev" disabled>Prev</button>
+  <a id="link" href="./Don't_Open_2.html"><button class="btn" id="next" disabled>Next</button></a>
+</div>
+
+<img src="./images/logo.jpg" class="image-logo center"/>
+
+</div>
+</header>
+
+<main class='image_1'>
+
+<audio id="myAudio" src="music/Door2.mp3" loop></audio>
+<button class="playBtn" id="playBtn" onclick="playAudio()">Stage 1</button>
+
+  <button class="homepageBtn" id="homepage"></button> 
+
+  <p class='bag-text'>Inventory</p>
+  <img src="images/bag-PhotoRoom-removebg-preview.png" alt="alt text" class="bag" id="bag";/>
+  <img src="images/sword1.png" alt="alt text" class="sword" id="sword";/>
+
+
+
+</main>
+<body align="center">
+  <div class="scroll-div" id="textBox1">
+    <h1>Door of Durin<h1>
+    <div class="scroll-object">
+You stand before the door of Durin. The slabs were made by Narvi out of a grey material stronger than stone, and inlaid by Celebrimbor with ithildin, 
+which could only be seen in starlight and moonlight. When visible, the fine silver-like inlay show a hammer and anvil (the emblems of Durin), 
+a crown and Seven Stars (Durin's Crown), two trees surmounted by crescent moons (symbolizing the Tree of the High Elves), and a single star (the emblem of the House of Fëanor). 
+On the top left and right corners there were the tengwar Calma (C) and Óre (N) standing for Celebrimbor and Narvi; between their feet was an Ando (D) for Durin. 
+<br><br>The inscription on the archivolt read: Ennyn Durin Aran Moria. Pedo Mellon a Minno. Im Narvi hain echant. Celebrimbor o Eregion teithant i thiw hin. 
+<br><br>Which means: The Doors of Durin, Lord of Moria. Speak, friend, and enter. I, Narvi, made them. Celebrimbor of Hollin drew these signs.
+<br><br><br>
+
+The Door of Durin is the weastern passage into the kingdom of Khazad-dûm. Khazad-dûm, commonly known as Moria or the Dwarrowdelf, is an underground kingdom beneath the Misty Mountains. 
+It was known for being the ancient realm of the Dwarves of Durin's Folk, and the most famed of all Dwarven realms. Durin the Deathless is the founder of underground kringdom. During the 
+fourth age after the fall of Sauron and with the destruction of the Balrog, the way was at last clear for the Longbeards to reclaim the Dwarrowdelf, and it is told that a few centuries into the Fourth Age, 
+Durin VII at last led his people back to their longed-for ancient homeland, retrieving what they could of Khazad-dûm's once-mighty riches.
+<br><br><br>
+
+Though over 2000 years have passed since Durin VII reclaimed their homeland and who knows what lurks in the dark. No dwarves have been seen for the last centuries and some say foul things survived the death of Sauron. 
+Noone knows what the Kingdom holds inside. It may be a prosperous city with dwarves, or an ancient city filled with orcs. Either way there are treasures to be found and you have big debts to pay
+<br><br><br>
+
+<button class="btn" id="textBtn">Continue</button>
+    </div>
+  </div>
+
+
+
+
+  <div class="scroll-div" id="textBox2">
+    <div class="scroll-object">
+To open the door of Durin you have to say the Word
+<br><br><br>
+
+<input type="text" class="input" id="password1">
+<br><br>
+<button class="btn" id="textBtn1">Speak</button>
+
+    </div>
+  </div>
+
+    <nav>
+    <ul class="inventory" id="inventory">
+      <li><a class="inventory-text" id="inventory-sword">Sword</a></li>
+      <br>
+      <li><a href="./Don't_Open_3.html" class="inventory-text inventory-hide ">Map</a></li>
+      <br>
+      <li><a href="" class="inventory-text inventory-hide ">Gold</a></li>
+      <br>
+      <li><a href="" class="inventory-text inventory-hide ">Note</a></li>
+    </ul>
+  </nav>
+
+
+<script src="script.txt"></script>
+
+
+  
+
+
+</html>

@@ -1,0 +1,236 @@
+
+
+var x = document.getElementById("myAudio");
+const hide = document.querySelectorAll("hide");
+
+  function playAudio() { 
+  var playBtn = document.getElementById("playBtn"); 
+    x.play();
+    playBtn.classList.add("hide"); 
+  } 
+
+
+
+const semicircle = document.querySelectorAll('.semicircle');
+
+
+if(localStorage.getItem("count_timer1")){
+    var count_timer1 = localStorage.getItem("count_timer1");
+} else {
+    var count_timer1 = 60*60;
+}
+
+
+var minutes = parseInt(count_timer1/60);
+var seconds = parseInt(count_timer1%60);
+function countDownTimer(){
+    if(seconds < 10){
+        seconds= "0"+ seconds ;
+    }if(minutes < 10){
+        minutes= "0"+ minutes ;
+}
+
+    document.getElementById("total-time-left").innerHTML = " " + minutes + ":" + seconds;
+    if(count_timer1 <= 0){
+         semicircle[2].style.display = 'none';
+         semicircle[0].style.display = 'none';
+         semicircle[1].style.display = 'none';
+         localStorage.clear("count_timer1");
+         
+    } else {
+        count_timer1 = count_timer1 -1 ;
+        minutes = parseInt(count_timer1/60);
+        seconds = parseInt(count_timer1%60);
+        localStorage.setItem("count_timer1",count_timer1);
+        setTimeout("countDownTimer()",1000);
+    }
+
+
+
+
+const starTime = Date.now();
+const futureTime = starTime + count_timer1;
+const currentTime = Date.now();
+const remainingTime = futureTime - currentTime;
+const angle = (count_timer1)/(60*60) * 360;
+
+
+if(angle > 180){
+  semicircle[2].style.display = 'none';
+  semicircle[0].style.transform = `rotate(180deg)`;
+  semicircle[1].style.transform = `rotate(${angle}deg)`;
+
+} else {
+  semicircle[2].style.display = 'block';
+  semicircle[0].style.transform = `rotate(${angle}deg)`;
+  semicircle[1].style.transform = `rotate(${angle}deg)`;
+}
+
+
+if(angle < 180) {  
+  semicircle[0].style.backgroundColor = "GoldenRod";
+  semicircle[1].style.backgroundColor = "GoldenRod";
+} 
+
+if(angle < 90){
+  semicircle[0].style.backgroundColor = "DarkRed";
+  semicircle[1].style.backgroundColor = "DarkRed";
+}
+}
+
+
+
+setTimeout("countDownTimer()",1000);
+
+
+
+
+
+const next = document.getElementById("next");
+const textBox1 = document.getElementById("textBox1");
+const textBox2 = document.getElementById("textBox2");
+const textBox3 = document.getElementById("textBox3");
+const textBox4 = document.getElementById("textBox4");
+const textBox5 = document.getElementById("textBox5");
+const textBox6 = document.getElementById("textBox6");
+const textBox7 = document.getElementById("textBox7");
+const textBox8 = document.getElementById("textBox8");
+const homepage = document.getElementById("homepage");
+const bag = document.getElementById("bag");
+const inventory = document.getElementById("inventory");
+const textBtn = document.getElementById("textBtn");
+const textBtn1 = document.getElementById("textBtn1");
+const textBtn2 = document.getElementById("textBtn2");
+const textBtn3 = document.getElementById("textBtn3");
+const textBtn4 = document.getElementById("textBtn4");
+const textBtn5 = document.getElementById("textBtn5");
+const textBtn6 = document.getElementById("textBtn6");
+const password1 = document.getElementById("password1").value;
+const password2 = document.getElementById("password2").value;
+const sword = document.getElementById("sword");
+const map = document.getElementById("map");
+const dwarf = document.getElementById("dwarf");
+const inventoryChilds = inventory.childNodes;
+const elementsOpen = document.getElementsByClassName("inventory-open");
+const elementsHide = document.getElementsByClassName("inventory-hide");
+
+
+
+
+homepage.addEventListener("click", () => {
+    if (textBox1.style.display == 'none') {
+        textBox1.style.display = 'block';
+    } else {
+        textBox1.style.display = 'none';
+    }
+
+    if (textBox2.style.display == 'block') {
+        textBox2.style.display = 'none';
+    }
+    if (textBox3.style.display == 'block') {
+        textBox3.style.display = 'none';
+    }
+    if (textBox4.style.display == 'block') {
+        textBox4.style.display = 'none';
+    }
+    if (textBox5.style.display == 'block') {
+        textBox5.style.display = 'none';
+    }
+    if (textBox6.style.display == 'block') {
+        textBox6.style.display = 'none';
+    }
+    if (textBox7.style.display == 'block') {
+        textBox7.style.display = 'none';
+    }
+});
+
+bag.addEventListener("click", () => {
+    if (inventory.style.display == 'none') {
+        inventory.style.display = 'block';
+    } else {
+        inventory.style.display = 'none';
+    }
+});
+
+inventoryChilds[1].addEventListener("click", () => {
+    if (sword.style.display == 'none') {
+        sword.style.display = 'block';
+    } else {
+        sword.style.display = 'none';
+    }
+});
+
+elementsOpen[0].addEventListener("click", () => {
+   if (map.style.display == 'none') {       
+        map.style.display = 'block';
+        dwarf.style.display = 'none';
+      } else {
+        map.style.display = 'none';
+        dwarf.style.display = 'block';      
+      }
+});
+
+
+textBtn.addEventListener("click", () => {
+   textBox1.style.display = 'none';
+   textBox2.style.display = 'block';
+});
+
+textBtn1.addEventListener("click", () => {
+    if (textBox2.style.display == 'block') {
+        textBox2.style.display = 'none';
+}
+});
+
+
+dwarf.addEventListener("click", () => { 
+   textBox3.style.display = 'block';
+});
+
+textBtn2.addEventListener("click", () => { 
+   textBox3.style.display = 'none';
+   textBox4.style.display = 'block';
+});
+
+textBtn3.addEventListener("click", () => {
+   textBox4.style.display = 'none';
+   textBox5.style.display = 'block';
+});
+
+textBtn4.addEventListener("click", () => {
+   textBox5.style.display = 'none';
+   textBox6.style.display = 'block';
+});
+
+ textBtn5.addEventListener("click", () => {
+ const password1 = document.getElementById("password1").value;
+   if (password1 == 'mirromere') {
+   textBox6.style.display = 'none';
+   textBox7.style.display = 'block';
+}
+});
+
+function clearInput(target){
+        if (target.value== '_____and____'){
+            target.value= "";
+       }
+    }
+
+ textBtn6.addEventListener("click", () => {
+ const password2 = document.getElementById("password2").value;
+   if (password2 == 'hammer and anvil') {
+   textBox7.style.display = 'none';
+   next.disabled = false;
+   elementsHide[0].style.display = "block";
+   elementsHide[1].style.display = "block";
+}
+});
+
+
+elementsHide[1].addEventListener("click", () => {
+   if (textBox8.style.display == 'none') {       
+        textBox8.style.display = 'block';
+      } else {
+        textBox8.style.display = 'none';     
+      }
+});

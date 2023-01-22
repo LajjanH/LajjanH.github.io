@@ -1,0 +1,166 @@
+<title>TIMER</title>
+<head>
+   <link href:'./style.css' rel:'stylesheet'>
+  <title>Basic Web Page</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="style.css" rel="stylesheet">
+</head> 
+
+<header >
+<div>
+  <div class="move-left">
+   <div class="circle-container center">
+     <div class="semicircle"></div>
+     <div class="semicircle"></div>
+     <div class="semicircle"></div>
+     <div class="outermost-circle"></div>
+     <div class="timer-container center"> 
+       <div id="total-time-left" class="timer center"> </div>
+    </div>
+  </div>
+  </div>
+
+<div class="container">
+  <h1>Step Progress Bar</h1>
+  <div class="center">
+  <div class="progress-container">
+    <div class="progress" id="progress"></div>
+      <div class="circle active fa-1">1</div>
+      <div class="circle active fa-2">2</div>
+      <div class="circle active fa-3">3</div>
+      <div class="circle active fa-3">4</div>
+      <div class="circle active fa-3">5</div>
+  </div>
+  </div>
+
+  <a id="link" href="./Don't_Open_4.html"><button class="btn" id="next" >Prev</button></a>
+  <a id="link" href="./Don't_Open_5.html"><button class="btn" id="next4" disabled>Next</button></a>
+</div>
+
+<img src="./images/logo.jpg" class="image-logo center"/>
+
+</div>
+</header>
+
+<main class='image_6'>
+
+<audio id="myAudio" src="music/32_theedgeofthewild_90secclip.mp3" loop></audio>
+<audio id="myAudio1" src="music/end.mp3" loop></audio>
+<button class="playBtn" id="playBtn" onclick="playAudio()">Stage 5</button>
+
+  <button class="homepageBtn" id="homepage"></button> 
+
+  <p class='bag-text'>Inventory</p>
+  <img src="images/bag-PhotoRoom-removebg-preview.png" alt="alt text" class="bag" id="bag";/>
+  <img src="images/sword1.png" alt="alt text" class="sword" id="sword";/>
+  <img src="images/khazadum_map.jpg" alt="alt text" class="map" id="map";/>
+
+
+
+</main>
+<body align="center">
+  <div class="scroll-div" id="textBox1">
+    <div class="scroll-object">
+You made it! Time to pay up.
+
+<br><br>
+
+<button class="btn" id="textBtn">Give gold</button>
+    </div>
+  </div>
+
+
+
+
+  <div class="scroll-div-NoScroll" id="textBox2">
+    <div class="scroll-object">
+Aah, thank you. But how do we know if this gold isn't stolen from them dwarves? 
+We don't want trouble with the folk of Durin.
+<br><br>
+Hmm...If you can continue this we know the gold is not stolen:
+<br><br>
+the world is grey..."
+<br><br>
+
+<input type="text" class="input" id="password2">
+<br><br>
+<button class="btn" id="textBtn1">Speak</button>
+
+    </div>
+  </div>
+
+ <div class="scroll-div-NoScroll" id="textBox3">
+    <div class="scroll-object">
+
+Haha! I don't belive it, the gold is not stolen. That passage is only known by those who know the lore of Durin's folk. Well, this is where we part.
+
+<br><br>
+
+<button class="btn" id="textBtn2">Bye</button>
+    </div>
+  </div>
+
+<div class="scroll-div-NoScroll" id="textBox4">
+    <h1>The End<h1>
+    <div class="scroll-object">
+
+You managed to pay up in time. What a journey. Now, let's find a new tavern and new friends...
+
+<br><br>
+
+    </div>
+  </div>
+
+
+<div class="scroll-div" id="textBox8">
+    <div class="scroll-object">
+There hammer on the anvil smote,<br>
+There chisel clove, and graver wrote;<br>
+There forged was blade, and bound was hilt;<br>
+The delver mined, the mason built.<br>
+There beryl, pearl, and opal pale,<br>
+And metal wrought like fishes' mail,<br>
+Buckler and corslet, axe and sword,<br>
+And shining spears were laid in hoard.<br><br>
+
+Unwearied then were Durin's folk;<br>
+Beneath the mountains music woke:<br>
+The harpers harped, the minstrels sang,<br>
+And at the gates the trumpets rang.<br>
+
+The world is grey, the mountains old,<br>
+The forge's fire is ashen-cold;<br>
+No harp is wrung, no hammer falls:<br>
+The darkness dwells in Durin's halls;<br>
+The shadow lies upon his tomb<br>
+In Moria, in Khazad-dûm.<br>
+But still the sunken stars appear<br>
+In dark and windless Mirrormere;<br>
+There lies his crown in water deep,<br>
+Till Durin wakes again from sleep.
+
+
+
+    </div>
+  </div>
+
+    <nav>
+    <ul class="inventory" id="inventory">
+      <li><a class="inventory-text" id="inventory-sword">Sword</a></li>
+      <br>
+      <li><a class="inventory-text inventory-open">Map</a></li>
+      <br>
+      <li><a class="inventory-text gold">Gold</a></li>
+      <br>
+      <li><a class="inventory-text inventory-open">Note</a></li>
+    </ul>
+  </nav>
+
+
+<script src="script-five.txt"></script>
+
+
+  
+
+
+</html>
