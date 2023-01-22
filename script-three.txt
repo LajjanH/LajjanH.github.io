@@ -95,6 +95,7 @@ const textBox5 = document.getElementById("textBox5");
 const textBox6 = document.getElementById("textBox6");
 const textBox7 = document.getElementById("textBox7");
 const textBox8 = document.getElementById("textBox8");
+const textBox9 = document.getElementById("textBox9");
 const homepage = document.getElementById("homepage");
 const bag = document.getElementById("bag");
 const inventory = document.getElementById("inventory");
@@ -105,8 +106,10 @@ const textBtn3 = document.getElementById("textBtn3");
 const textBtn4 = document.getElementById("textBtn4");
 const textBtn5 = document.getElementById("textBtn5");
 const textBtn6 = document.getElementById("textBtn6");
+const textBtn7 = document.getElementById("textBtn7");
 const password1 = document.getElementById("password1").value;
 const password2 = document.getElementById("password2").value;
+const password3 = document.getElementById("password3").value;
 const sword = document.getElementById("sword");
 const map = document.getElementById("map");
 const dwarf = document.getElementById("dwarf");
@@ -220,9 +223,17 @@ function clearInput(target){
  const password2 = document.getElementById("password2").value;
    if (password2 == 'hammer and anvil') {
    textBox7.style.display = 'none';
-   next.disabled = false;
+   textBox9.style.display = 'block';
    elementsHide[0].style.display = "block";
    elementsHide[1].style.display = "block";
+}
+});
+
+ textBtn7.addEventListener("click", () => {
+ const password3 = document.getElementById("password3").value;
+   if (password3 == "durin's bridge") {
+   textBox9.style.display = 'none';
+   next.disabled = false;
 }
 });
 
