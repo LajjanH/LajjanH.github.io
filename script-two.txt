@@ -153,7 +153,7 @@ elements[0].addEventListener("click", () => {
 
 
 textBtn.addEventListener("click", () => {
-  const password2 = document.getElementById("password2").value;
+  const password2 = document.getElementById("password2").value.toLowerCase();
   if (password2 == "durin") 
    textBox1.style.display = 'none';
    textBox2.style.display = 'block';
@@ -170,7 +170,7 @@ textBtn1.addEventListener("click", () => {
 
 
 textBtn2.addEventListener("click", () => {
-  const password3 = document.getElementById("password3").value;
+  const password3 = document.getElementById("password3").value.toLowerCase();
   if (password3 == "mithril forge"){ 
    textBox3.style.display = 'none';
    textBox4.style.display = 'block';
@@ -178,7 +178,7 @@ textBtn2.addEventListener("click", () => {
 });
 
 textBtn3.addEventListener("click", () => {
-  const password4 = document.getElementById("password4").value;
+  const password4 = document.getElementById("password4").value.toLowerCase();
   if (password4 == "chamber of mazarbul") {
    textBox4.style.display = 'none';
    {next1.disabled = false};

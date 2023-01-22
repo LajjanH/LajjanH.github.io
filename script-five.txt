@@ -129,8 +129,20 @@ textBtn.addEventListener("click", () => {
 });
 
 textBtn1.addEventListener("click", () => {
-const password2 = document.getElementById("password2").value;
+const password2 = document.getElementById("password2").value.toLowerCase();
     if (password2 == 'mountains old') {
+        textBox2.style.display = 'none';
+        textBox3.style.display = 'block';
+    } 
+    if (password2 == 'the mountains old') {
+        textBox2.style.display = 'none';
+        textBox3.style.display = 'block';
+    } 
+    if (password2 == 'mountains old,') {
+        textBox2.style.display = 'none';
+        textBox3.style.display = 'block';
+    } 
+    if (password2 == 'the mountains old,') {
         textBox2.style.display = 'none';
         textBox3.style.display = 'block';
     } 

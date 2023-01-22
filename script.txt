@@ -134,7 +134,7 @@ textBtn.addEventListener("click", () => {
 });
 
 textBtn1.addEventListener("click", () => {
-  const password1 = document.getElementById("password1").value;
+  const password1 = document.getElementById("password1").value.toLowerCase();
   if (password1 == "mellon") 
    {next.disabled = false}
   if (password1 == "mellon")

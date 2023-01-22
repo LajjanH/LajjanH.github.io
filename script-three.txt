@@ -206,7 +206,7 @@ textBtn4.addEventListener("click", () => {
 });
 
  textBtn5.addEventListener("click", () => {
- const password1 = document.getElementById("password1").value;
+ const password1 = document.getElementById("password1").value.toLowerCase();
    if (password1 == 'mirromere') {
    textBox6.style.display = 'none';
    textBox7.style.display = 'block';
@@ -220,7 +220,7 @@ function clearInput(target){
     }
 
  textBtn6.addEventListener("click", () => {
- const password2 = document.getElementById("password2").value;
+ const password2 = document.getElementById("password2").value.toLowerCase();
    if (password2 == 'hammer and anvil') {
    textBox7.style.display = 'none';
    textBox9.style.display = 'block';
@@ -230,8 +230,13 @@ function clearInput(target){
 });
 
  textBtn7.addEventListener("click", () => {
- const password3 = document.getElementById("password3").value;
+ const password3 = document.getElementById("password3").value.toLowerCase();
    if (password3 == "durin's bridge") {
+   textBox9.style.display = 'none';
+   next.disabled = false;
+}
+
+   if (password3 == "durins bridge") {
    textBox9.style.display = 'none';
    next.disabled = false;
 }
