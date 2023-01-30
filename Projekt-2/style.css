@@ -669,6 +669,7 @@ text-shadow:
   max-height: 155vh;
 }
 
+
 .hidden {
   opacity: 0;
   filter: blur(5px);
@@ -778,7 +779,7 @@ text-shadow:
 }
 
 .marginBot {
- margin-bottom: -120px;
+ bot: -20;
 }
 
 
