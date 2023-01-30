@@ -9,7 +9,7 @@ header{
   width: 100%;
   z-index: 200;
   text-shadow:
-    0 0 7px #000,
+    0 0 7px #000;
     0 0 10px #000,
     0 0 21px #fff,
     0 0 42px #bc13fe,
@@ -21,7 +21,7 @@ header{
 
 .neonText {
   width: 300px;
-  height: 200px;
+  height: 125px;
   color: #fff;
   text-shadow:
     0 0 7px #fff,
@@ -80,12 +80,41 @@ header{
     0 0 2px #fff,
     0 0 4px #fff,
     0 0 6px #fff;
-    0 0 10px #bc13fe
+    0 0 10px #bc13fe,
     0 0 45px #bc13fe,
     0 0 55px #bc13fe,
     0 0 70px #bc13fe,
     0 0 80px #bc13fe;
 }}
+
+@keyframes pulsate {
+    
+  100% {
+
+      box-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #bc13fe,
+      0 0 80px #bc13fe;
+      0 0 90px #bc13fe,
+      0 0 100px #bc13fe,
+      0 0 150px #bc13fe;
+  }
+  
+  0% {
+
+    box-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 10px #bc13fe,
+    0 0 45px #bc13fe,
+    0 0 55px #bc13fe;
+    0 0 70px #bc13fe;
+    0 0 80px #bc13fe;
+}}
+
 
 .neonText1 {
   width: 400px;
@@ -449,9 +478,9 @@ box-shadow:
   background-color: #131316;
   color: #999;
   box-shadow:
-    0 0 7px #ddd,
+    0 0 7px #ddd;
     0 0 10px #ddd,
-    0 0 21px #0da; 
+    0 0 21px #0da, 
     0 0 40px #999,
     0 0 80px #999,
     0 0 90px #999,
@@ -465,7 +494,7 @@ box-shadow:
   border-radius: 50%;
   height: 75px;
   width: 75px;
-  border: 6px solid #b2bec3;
+  border: 2.5px solid #b2bec3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -486,16 +515,22 @@ box-shadow:
 }
 
 .circle.active {
+color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff;       
+border: 6px solid #c32aff;
   border-color: #c32aff;
     box-shadow:
     0 0 7px #c32aff,
     0 0 10px #c32aff,
-    0 0 21px #c32aff; 
-      0 0 40px #c32aff,
+    0 0 21px #c32aff,
+      0 0 40px #c32aff;
       0 0 80px #c32aff,
-      0 0 90px #c32aff,
+      0 0 90px #c32aff;
       0 0 100px #c32aff,
-      0 0 150px #c32aff;
+      0 0 150px #c32aff,
 
 }
 
@@ -1152,33 +1187,6 @@ text-shadow:
 }
   
 
-@keyframes pulsate {
-    
-  100% {
-
-      box-shadow:
-      0 0 4px #fff,
-      0 0 11px #fff,
-      0 0 19px #fff,
-      0 0 40px #bc13fe,
-      0 0 80px #bc13fe,
-      0 0 90px #bc13fe,
-      0 0 100px #bc13fe,
-      0 0 150px #bc13fe;
-  }
-  
-  0% {
-
-    box-shadow:
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff,
-    0 0 10px #bc13fe,
-    0 0 45px #bc13fe,
-    0 0 55px #bc13fe,
-    0 0 70px #bc13fe,
-    0 0 80px #bc13fe;
-}}
 
 
 .puzzle-piece {
