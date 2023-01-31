@@ -778,9 +778,6 @@ text-shadow:
  margin-top: -120px;
 }
 
-.marginBot {
- bot: -20;
-}
 
 
         .main-scroll-div {
@@ -1200,3 +1197,18 @@ text-shadow:
 
 
 /* section 5 below */
+
+
+.marginBot {
+  position: absolute;
+  top: 40%;
+  left: 40%  
+}
+
+.margincenter {
+  position: absolute;
+  top: 40%;
+  left: 38%;  
+}
+
+
