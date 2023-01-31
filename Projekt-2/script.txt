@@ -238,9 +238,10 @@ child.forEach(child => {
     if (child.classList.contains("child-clicked")) {
         child.classList.remove("child-clicked");
 
-        if (specificChildCounter < 0) {
+        if (specificChildren.includes(child)) {
             specificChildCounter--;
         }
+
 
     } else {
         child.classList.add("child-clicked");
