@@ -1,0 +1,305 @@
+   
+<!DOCTYPE html>
+<html lang="en">
+<title>Escaperoom</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <meta htp-equiv="X-UA-Compatible" content="ie=edge">
+   <link href:'./style.css' rel:'stylesheet'>
+  <title>Basic Web Page</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href='https://fonts.googleapis.com/css?family=Sacramento:400' rel='stylesheet' type='text/css'>
+  <link href="style.css" rel="stylesheet">
+  <script defer src="script.txt"></script>
+</head> 
+
+<header >
+<div>
+  <div class="move-left circle__container">
+   <div class="circle-content center r y" id="cirlce-container">
+     <div class="semicircle"></div>
+     <div class="semicircle"></div>
+     <div class="semicircle"></div>
+     <div class="outermost-circle"></div>
+     <div class="timer-container center"> 
+       <div id="total-time-left" class="timer center"> </div>
+       <div id="total-time-left-1" class="timer-1 center"> </div>
+    </div>
+  </div>
+  </div>
+
+<div class="container">
+  <h1>Step Progress Bar</h1>
+  <div class="center">
+  <div class="progress-container">
+    <div class="progress" id="progress"></div>
+      <div class="circle p active fa-1">1</div>
+      <div class="circle fa-2">2</div>
+      <div class="circle fa-3">3</div>
+      <div class="circle fa-3">4</div>
+      <div class="circle fa-3">5</div>
+  </div>
+  </div>
+
+  <a id="link"><button class="btn" id="next" disabled>Next</button></a>
+</div>
+<div class="neon__sign--container">
+  <h1 class="neonText">
+    Haker's
+   <br>
+   Escape room
+   </h1>
+</div>
+
+
+</div>
+</header>
+
+
+<body id="body">
+<audio id="myAudio" src="music/1.mp3" loop></audio>
+<audio id="myAudio1" src="music/2.mp3" loop></audio>
+<audio id="myAudio2" src="music/3.mp3" loop></audio>
+<audio id="myAudio3" src="music/4.mp3" loop></audio>
+<audio id="myAudio4" src="music/5.mp3" loop></audio>
+<audio id="myAudio5" src="music/6.mp3" loop></audio>
+<button class="playBtn" id="playBtn" onclick="playAudio()">
+<h1>Welcome</h1>
+<div>
+<p>In this escape room you have 60 min.</p>
+<p>There is five stages to get through.</p>
+<p>Good luck! </p>
+<p>And by the way, the time has already started</p>
+</div>
+<h1>*Play*</h1 > 
+<br><br><br><br><br>
+</button>
+</body>
+
+ <main>
+
+<section class="section hidden hid margin" id="first"> 
+
+<div>
+<h1 class="hidden">Hidden Message</h1>
+<div class="hidden delay-1">
+<p>Experience the thrill of discovery.</p>
+<p>Seize the opportunity for adventure.</p>
+<p>Challenge yourself to think differently.</p>
+<p>Ascend to new heights of understanding.</p>
+<p>Puzzle through the challenges ahead.</p>
+<p>Experience something truly extraordinary.</p><br>
+</div>
+
+<div class="hidden delay-2">
+<p>Reveal the secrets hidden within.</p>
+<p>Open your mind to new dimensions.</p>
+<p>Opportunities for exploration await.</p>
+<p>Master the art of spatial manipulation.</p>
+</div>
+</div>
+
+<a><button class="hidden delay-3 btn" id="btn">Answer</button></a> <br>
+<input class="hidden delay-3 input" type="text" id="password1" required
+       minlength="" maxlength="20" size="10">
+<h1 class="hidden delay-3 h1_1">Moore Space</h1>
+
+
+</section>
+
+
+<section class="hid alert-section" id="close1">
+<div class="alert-container hidden-alert" id="successAlert">
+  <div class="success alert">
+    <div class="content-alert">
+      <div class="icon-alert">
+        <svg width="50" height="50" id="Layer_1" style="enable-background:new 0 0 128 128;" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><circle fill="#fff" cx="64" cy="64" r="64"/></g><g><path fill="#3EBD61" d="M54.3,97.2L24.8,67.7c-0.4-0.4-0.4-1,0-1.4l8.5-8.5c0.4-0.4,1-0.4,1.4,0L55,78.1l38.2-38.2   c0.4-0.4,1-0.4,1.4,0l8.5,8.5c0.4,0.4,0.4,1,0,1.4L55.7,97.2C55.3,97.6,54.7,97.6,54.3,97.2z"/></g></svg>
+    </div>
+      <p>Success! Get ready for next stage</p>
+    </div>
+    <button class="close" id="close">
+     <svg height="18px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="18px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#69727D" d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/></svg>
+    </button>
+  </div>
+  </div>
+</section>
+
+<section class="hidden hid middle" id="middle"> 
+
+    <div class="main-scroll-div">
+        <div>
+            <button class="icon" onclick="scrolll()"> <i class="fas fa-angle-double-left"><<</i></button>
+        </div>
+        <div class="cover">
+            <div class="scroll-images">
+                <div class="child" id="child1"><img class="child-img" src="images/1.png" alt="image"></div>
+                <div class="child"><img class="child-img" src="images/8.jpg" alt="image"></div>
+                <div class="child"><img class="child-img" src="images/5.jpg" alt="image"></div>
+                <div class="child" id="child2"><img class="child-img" src="images/2.jpg" alt="image"></div>
+                <div class="child"><img class="child-img" src="images/6.jpg" alt="image"></div>
+                <div class="child"><img class="child-img" src="images/7.jpg" alt="image"></div>
+                <div class="child" id="child3"><img class="child-img" src="images/3.jpg" alt="image"></div>
+                <div class="child"><img class="child-img" src="images/4.jpg" alt="image"></div>
+            </div>
+        </div>
+        <div>
+            <button class="icon" onclick="scrollr()"> <i class="fas fa-angle-double-right">>></i></button>
+        </div>
+    </div>
+
+
+
+
+</section>
+
+<section class="hid alert-section" id="close3">
+<div class="alert-container hidden-alert" id="successAlert1">
+  <div class="success alert">
+    <div class="content-alert">
+      <div class="icon-alert">
+        <svg width="50" height="50" id="Layer_1" style="enable-background:new 0 0 128 128;" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><circle fill="#fff" cx="64" cy="64" r="64"/></g><g><path fill="#3EBD61" d="M54.3,97.2L24.8,67.7c-0.4-0.4-0.4-1,0-1.4l8.5-8.5c0.4-0.4,1-0.4,1.4,0L55,78.1l38.2-38.2   c0.4-0.4,1-0.4,1.4,0l8.5,8.5c0.4,0.4,0.4,1,0,1.4L55.7,97.2C55.3,97.6,54.7,97.6,54.3,97.2z"/></g></svg>
+    </div>
+      <p>Congratulations! You have unlocked the padlock. Get ready for next stage</p>
+    </div>
+    <button class="close" id="close2">
+     <svg height="18px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="18px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#69727D" d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/></svg>
+    </button>
+  </div>
+  </div>
+</section>
+
+<section class="section hidden hid" id="middle-1"> 
+
+<div id="hiddenBox1" class="box middle-box" style="background-color: blue">6</div>
+<div id="hiddenBox2" class="box corner-box" style="background-color: green">5</div>
+<div id="hiddenBox3" class="box scattered-box" style="background-color: red">9</div>
+<div id="hiddenBox4" class="box scattered-box1" style="background-color: yellow">2</div>
+
+<div id="padlock">
+  <div id="buttons">
+    <button id="up1">^</button>
+    <button id="up2">^</button>
+    <button id="up3">^</button>
+    <button id="up4">^</button>
+  </div>
+  <div id="combination">
+    <div class="color" id="line1">0</div>
+    <div class="color" id="line2">0</div>
+    <div class="color" id="line3">0</div>
+    <div class="color" id="line4">0</div>
+  </div>
+  <div id="buttons">
+    <button class="btnDown" id="down1">v</button>
+    <button class="btnDown" id="down2">v</button>
+    <button class="btnDown" id="down3">v</button>
+    <button class="btnDown" id="down4">v</button>
+  </div>
+</div>
+  
+</section>
+
+
+<section class="hid alert-section" id="close5">
+<div class="alert-container hidden-alert" id="successAlert2">
+  <div class="success alert">
+    <div class="content-alert">
+      <div class="icon-alert">
+        <svg width="50" height="50" id="Layer_1" style="enable-background:new 0 0 128 128;" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><circle fill="#fff" cx="64" cy="64" r="64"/></g><g><path fill="#3EBD61" d="M54.3,97.2L24.8,67.7c-0.4-0.4-0.4-1,0-1.4l8.5-8.5c0.4-0.4,1-0.4,1.4,0L55,78.1l38.2-38.2   c0.4-0.4,1-0.4,1.4,0l8.5,8.5c0.4,0.4,0.4,1,0,1.4L55.7,97.2C55.3,97.6,54.7,97.6,54.3,97.2z"/></g></svg>
+    </div>
+      <p>Great! You have solved the puzzle. Get ready for next stage</p>
+    </div>
+    <button class="close" id="close4">
+     <svg height="18px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="18px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#69727D" d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/></svg>
+    </button>
+  </div>
+  </div>
+</section>
+
+
+<section class="section hidden hid" id="middle-2"> 
+
+<div class="puzzle-container">
+  <div class="puzzle-piece piece1"></div>
+  <div class="puzzle-piece piece2"></div>
+  <div class="puzzle-piece piece3"></div>
+  <div class="puzzle-piece piece4"></div>
+  <div class="puzzle-piece piece5"></div>
+  <div class="puzzle-piece piece6"></div>
+  <div class="puzzle-piece piece7"></div>
+  <div class="puzzle-piece piece8"></div>
+  <div class="puzzle-piece piece9"></div>
+</div>
+
+</section>
+
+
+
+
+<section class="section hidden hid" id="middle-3"> 
+
+<div class="marginBot">
+<h1>The Riddle</h1>
+<div class="hidden delay-1">
+<p>Trapped in a room with a tiger on the prowl,</p>
+<p>Neon lights illuminating every growl.</p>
+<p>I'm not just any ordinary man,</p>
+<p>I have the skills to escape, if I can.</p><br>
+</div>
+<div class="hidden delay-2">
+<p>I've spent years studying and training,</p>
+<p>To care for these creatures, it's not just containing.</p>
+<p>I know their habits and how they think,</p>
+<p>But in this room, I'm on the brink.</p> <br>
+</div>
+<div class="hidden delay-3">
+<p>So what am I? Who am I?</p><br>
+</div>
+
+
+<input class="hidden delay-4 input" type="text" id="password2" required
+       minlength="" maxlength="20" size="10"> <br><br>
+<button class="hidden delay-4 btn" id="btn4">Finish</button>
+</div>
+
+
+
+</section>
+
+<section class="section hidden hid" id="middle-4"> 
+
+<h1 class="neonText1 margincenter">
+ Good Job!
+<br>
+You Made It!
+</h1>
+
+
+</section>
+
+</section>
+
+<section class="section hidden hid " id="middle-5"> 
+
+<h1 class="neonText2 margincenter">
+ Time is up!
+<br>
+Better Luck Next Time!
+</h1>
+
+
+</section>
+
+
+ </main>
+
+
+
+
+
+
+  
+
+
+</html>
+<!-- <i class="fas fa-angle-double-left"></i> -->

@@ -1,0 +1,458 @@
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+     } else {
+         entry.target.classList.remove('show');
+     }
+
+
+
+  });
+
+})
+;
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+var x = document.getElementById("myAudio");
+var x1 = document.getElementById("myAudio1");
+var x2 = document.getElementById("myAudio2");
+var x3 = document.getElementById("myAudio3");
+var x4 = document.getElementById("myAudio4");
+var x5 = document.getElementById("myAudio5");
+const hide = document.querySelectorAll("hide");
+
+  function playAudio() { 
+  var playBtn = document.getElementById("playBtn"); 
+    x.play();
+    playBtn.classList.add("hide"); 
+    const first = document.getElementById('first');
+    first.style.display = 'grid';
+    document.getElementById('first').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  } 
+
+
+
+const semicircle = document.querySelectorAll('.semicircle');
+const cirlceContainer = document.getElementById("cirlce-container");
+
+
+if(localStorage.getItem("count_timer1")){
+    var count_timer1 = localStorage.getItem("count_timer1");
+} else {
+    var count_timer1 = 60*60;
+}
+
+
+var minutes = parseInt(count_timer1/60);
+var seconds = parseInt(count_timer1%60);
+function countDownTimer(){
+    if(seconds < 10){
+        seconds= "0"+ seconds ;
+    }if(minutes < 10){
+        minutes= "0"+ minutes ;
+}
+
+    document.getElementById("total-time-left").innerHTML = " " + minutes + ":" + seconds;
+    if(count_timer1 <= 0){
+         semicircle[2].style.display = 'none';
+         semicircle[0].style.display = 'none';
+         semicircle[1].style.display = 'none';
+  const middleFive = document.getElementById('middle-5');
+  middleFive.style.display = 'grid';
+  document.getElementById('middle-5').scrollIntoView({ behavior: 'smooth', block: 'center' });
+         localStorage.clear("count_timer1");
+         
+    } else {
+        count_timer1 = count_timer1 -1 ;
+        minutes = parseInt(count_timer1/60);
+        seconds = parseInt(count_timer1%60);
+        localStorage.setItem("count_timer1",count_timer1);
+        setTimeout("countDownTimer()",1000);
+    }
+
+
+
+
+
+const starTime = Date.now();
+const futureTime = starTime + count_timer1;
+const currentTime = Date.now();
+const remainingTime = futureTime - currentTime;
+const angle = (count_timer1)/(60*60) * 360;
+const cirlceContainer = document.getElementById("cirlce-container");
+
+if(angle > 180){
+  semicircle[2].style.display = 'none';
+  semicircle[0].style.transform = `rotate(180deg)`;
+  semicircle[1].style.transform = `rotate(${angle}deg)`;
+  cirlceContainer.classList.remove('r');
+  cirlceContainer.classList.remove('y');
+
+} else {
+  semicircle[2].style.display = 'block';
+  semicircle[0].style.transform = `rotate(${angle}deg)`;
+  semicircle[1].style.transform = `rotate(${angle}deg)`;
+}
+
+
+if(angle < 180) {  
+  semicircle[0].style.backgroundColor = "#FFF01F";
+  semicircle[1].style.backgroundColor = "#FFF01F"; 
+  cirlceContainer.classList.remove('circle-container');
+  cirlceContainer.classList.add('y');
+
+} 
+
+if(angle < 90){
+  semicircle[0].style.backgroundColor = "#FF3131";
+  semicircle[1].style.backgroundColor = "#FF3131";
+  cirlceContainer.classList.remove('y') ;
+  cirlceContainer.classList.add('r');
+
+}
+}
+
+
+
+setTimeout("countDownTimer()",1000);
+
+const progress = document.getElementById("progress");
+const next = document.getElementById("next");
+const circles = document.querySelectorAll('.circle');
+const actives = document.querySelectorAll(".active");
+
+let currentActive = 1;
+
+next.addEventListener("click", () => {
+  currentActive++; 
+
+  if(currentActive > circles.length){
+    currentActive = circles.length;
+  }
+update();
+
+const middle = document.getElementById('middle');
+const middleOne = document.getElementById('middle-1');
+const middleTwo = document.getElementById('middle-2');
+const middleThree = document.getElementById('middle-3');
+
+
+
+if(currentActive === 5) { 
+  
+  const middleThree = document.getElementById('middle-3');
+  middleThree.style.display = 'grid';
+  document.getElementById('middle-3').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  next.disabled = true;
+  x4.play();
+  x3.pause();
+}
+
+if(currentActive === 4) { 
+  
+  const middleTwo = document.getElementById('middle-2');
+  middleTwo.style.display = 'grid';
+  document.getElementById('middle-2').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  next.disabled = true;
+  x3.play();
+  x2.pause();
+
+}
+
+if(currentActive === 3) { 
+  const middleOne = document.getElementById('middle-1');
+  middleOne.style.display = 'grid';
+  document.getElementById('middle-1').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  next.disabled = true;
+  x2.play();
+  x1.pause();
+
+}
+
+
+if(currentActive === 2) { 
+  
+  middle.style.display = 'grid';
+  body.style.overflow = 'scroll';
+  document.getElementById('middle').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  next.disabled = true;
+  x1.play();
+  x.pause();
+
+}
+update();
+});
+
+
+
+
+console.log(currentActive);
+
+function update(){
+  circles.forEach((circle, idx)=>{
+    if(idx < currentActive){
+      circle.classList.add("active");    
+    } else {
+        circle.classList.remove("active");
+}
+});
+
+const bottom = 4;
+const top = currentActive - 1;
+
+progress.style.width =
+  (top / bottom) * 100 + "%";
+
+
+}
+
+ 
+    function scrolll() {
+        var left = document.querySelector(".scroll-images");
+        left.scrollBy(350, 0)
+    }
+
+    function scrollr() {
+        var right = document.querySelector(".scroll-images");
+        right.scrollBy(-350, 0)
+    }
+
+
+
+const child = Array.from(document.querySelectorAll(".child"));
+const specificChildren = [child[0], child[3], child[6]];
+const unSpecificChildren = [child[1], child[2], child[4], child[5], child[7]];
+const successAlert = document.getElementById('successAlert');
+const alertClose = document.querySelectorAll('#close, #close2');
+const alertClose1 = document.querySelectorAll('#close1, #close3');
+
+let specificChildCounter = 0;
+child.forEach(child => {
+   child.addEventListener("click", event => {
+    if (child.classList.contains("child-clicked")) {
+        child.classList.remove("child-clicked");
+
+        if (specificChildren.includes(child)) {
+            specificChildCounter--;
+        }
+
+
+    } else {
+        child.classList.add("child-clicked");
+        if (specificChildren.includes(child)) {
+            specificChildCounter++;
+        }
+ 
+    }
+
+  if (specificChildCounter === 3 && specificChildren.every(el => el.classList.contains("child-clicked")) && unSpecificChildren.every(el => !el.classList.contains("child-clicked"))){
+
+    const successAlert = document.getElementById('successAlert');
+    successAlert.classList.add("show-alert");   
+    successAlert.classList.remove("hidden-alert");
+    next.disabled = false;
+  }
+  });
+});
+
+alertClose.forEach(element => {
+  element.addEventListener("click", () => {
+    alertClose1.forEach(element1 => {
+      element1.style.display = 'none';
+    });
+  });
+});
+
+
+
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", () => {
+const answer1 = document.getElementById("password1").value.toLowerCase();
+const btn = document.getElementById("btn");
+  if(answer1 === 'escape room' || answer1 === 'escaperoom'){
+    next.disabled = false;
+    btn.classList.remove('btn');
+    btn.classList.add("btnRight");
+   } else { 
+    btn.classList.remove('btn');
+    btn.classList.add("btnFalse");
+}
+});
+
+
+const upButtons = document.querySelectorAll("#buttons button[id^='up']");
+const downButtons = document.querySelectorAll("#buttons button[id^='down']");
+const lines = document.querySelectorAll("#combination div");
+const correctCombination = [5,9,2,6];
+let enteredCombination = [0,0,0,0];
+
+upButtons.forEach(button => {
+  button.addEventListener("click", event => {
+
+    const lineId = event.target.id.slice(-1);
+    enteredCombination[lineId-1] = (enteredCombination[lineId-1]+1)%10;
+    lines[lineId-1].textContent = enteredCombination[lineId-1];
+    if (enteredCombination.toString() === correctCombination.toString()) {
+    const successAlert1 = document.getElementById('successAlert1');
+    successAlert1.classList.add("show-alert");   
+    successAlert1.classList.remove("hidden-alert");
+    next.disabled = false;
+    }
+
+
+
+
+});
+});
+
+downButtons.forEach(button => {
+  button.addEventListener("click", event => {
+
+
+const color = document.querySelectorAll(".color");
+
+    const lineId = event.target.id.slice(-1);
+    enteredCombination[lineId-1] = (enteredCombination[lineId-1]-1+10)%10;
+    lines[lineId-1].textContent = enteredCombination[lineId-1];
+    if (enteredCombination.toString() === correctCombination.toString()) {
+    const successAlert1 = document.getElementById('successAlert1');
+    successAlert1.classList.add("show-alert");   
+    successAlert1.classList.remove("hidden-alert");
+    next.disabled = false;
+    }
+
+  });
+
+});
+
+const hiddenBox = document.querySelectorAll("#hiddenBox1, #hiddenBox2, #hiddenBox3, #hiddenBox4");
+
+hiddenBox.forEach(hiddenBox => {
+  hiddenBox.addEventListener("click", () => {
+  if (hiddenBox.style.opacity = '0') {
+   hiddenBox.style.opacity = 1;
+  } 
+});
+});
+
+
+
+
+
+
+const piece1 = document.querySelector('.piece1');
+const piece2 = document.querySelector('.piece2');
+const piece3 = document.querySelector('.piece3');
+const piece4 = document.querySelector('.piece4');
+const piece5 = document.querySelector('.piece5');
+const piece6 = document.querySelector('.piece6');
+const piece7 = document.querySelector('.piece7');
+const piece8 = document.querySelector('.piece8');
+const piece9 = document.querySelector('.piece9');
+const puzzlePieces = document.querySelectorAll('.puzzle-piece');
+
+puzzlePieces.forEach(piece => {
+  piece.addEventListener("click", () => {
+    if (piece.style.backgroundColor === "gray") {
+      piece.style.backgroundColor = "white";
+    } else {
+      piece.style.backgroundColor = "gray";
+    }
+
+      if (piece4.style.backgroundColor === "white" || piece4.style.backgroundColor === "red" || piece4.style.backgroundColor === "gray") {
+            piece6.style.backgroundColor = "green";
+          }
+
+          if (piece6.style.backgroundColor === "white" || piece4.style.backgroundColor === "green" || piece4.style.backgroundColor === "gray") {
+            piece4.style.backgroundColor = "red";
+            }
+    
+
+  if (piece5.style.backgroundColor === "white") {
+            piece2.style.backgroundColor = "purple";
+            piece8.style.backgroundColor = "purple";
+        } 
+
+if (piece9.style.backgroundColor === "green" || piece9.style.backgroundColor === "purple" && 
+    piece4.style.backgroundColor === "red" || piece4.style.backgroundColor === "purple") {
+    piece4.style.backgroundColor = "purple";
+    piece6.style.backgroundColor = "purple";
+}
+
+
+      if (piece3.style.backgroundColor === "white") {
+            piece7.style.backgroundColor = "purple";
+        }
+      if (piece7.style.backgroundColor === "white" || piece7.style.backgroundColor === "purple") {
+            piece3.style.backgroundColor = "purple";
+        }
+      if (piece1.style.backgroundColor === "white" || piece3.style.backgroundColor === "purple") {
+            piece9.style.backgroundColor = "green";
+        }
+      if (piece9.style.backgroundColor === "green") {
+            piece1.style.backgroundColor = "purple";
+        }
+
+if (piece1.style.backgroundColor === "purple" && 
+    piece2.style.backgroundColor === "purple" && 
+    piece3.style.backgroundColor === "purple" &&
+piece4.style.backgroundColor === "purple" && 
+piece6.style.backgroundColor === "purple" && 
+piece7.style.backgroundColor === "purple" &&  
+    piece8.style.backgroundColor === "purple") {
+ piece9.style.backgroundColor = "purple";
+}
+
+
+if (piece9.style.backgroundColor === "purple" && 
+    piece3.style.backgroundColor === "purple" && 
+    piece1.style.backgroundColor === "purple" && 
+    piece7.style.backgroundColor === "purple") {
+  piece5.style.backgroundColor = "purple";
+} 
+
+
+
+if (piece5.style.backgroundColor === "purple") {
+    next.disabled = false;
+    const successAlert2 = document.getElementById('successAlert2');
+    successAlert2.classList.add("show-alert");   
+    successAlert2.classList.remove("hidden-alert");
+}
+
+
+
+else if (piece.style.backgroundColor === "purple" || piece.style.backgroundColor === "green" || piece.style.backgroundColor === "red" || piece.style.backgroundColor === "blue") {
+      piece.style.backgroundColor = "gray";
+}
+  });
+});
+
+
+
+
+
+const btn4 = document.getElementById("btn4");
+
+btn4.addEventListener("click", () => {
+const answer2 = document.getElementById("password2").value.toLowerCase();
+  if(answer2 === 'zookeeper' || answer2 === 'a zookeeper' || answer2 === 'the zookeeper'){
+    btn4.classList.remove('btn');
+    btn4.classList.add("btnRight");
+  const middleFour = document.getElementById('middle-4');
+  middleFour.style.display = 'grid';
+  document.getElementById('middle-4').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  x5.play();
+  x4.pause();
+   } else { 
+    btn4.classList.remove('btn');
+    btn4.classList.add("btnFalse");
+}
+});
