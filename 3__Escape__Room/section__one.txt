@@ -1,0 +1,30 @@
+var questionBtn = document.getElementById("time__btn1");
+var question = document.querySelector('.question__one');
+
+questionBtn.addEventListener("click", function() {
+if (question.style.display === 'none') {
+question.style.display = 'block'
+} else {
+question.style.display = 'none'
+}
+});
+
+answerBtn = document.getElementById('answerBtn--1');
+answer = document.querySelector('#answer');
+hid = document.querySelector('.hid');
+
+answerBtn.addEventListener("click", () => {
+  const answer = document.getElementById("answer").value;
+  if (answer == 6) 
+   {
+    hid.style.visibility = 'visible';
+
+    var circle = document.querySelector('.fa-2');
+     var lock = document.querySelector('.fa-lock');
+  var number = document.querySelector('.number');
+
+  lock.classList.add('hidden--2');
+  number.classList.remove('hidden--2');
+    circle.classList.add('active');
+   }
+});
