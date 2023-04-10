@@ -1,5 +1,4 @@
 window.addEventListener('wheel', function(e) {
-  e.preventDefault();
   const scrollStep = 2000;
   let scrollAmount = 0;
 
@@ -14,10 +13,12 @@ window.addEventListener('wheel', function(e) {
 
   window.scrollTo({
     left: targetPosition,
-    top: 0,
     behavior: "smooth"
-  });
+
 });
+});
+
+
 
 const openButton = document.getElementById("Notebook");
 const textBox = document.getElementById("comment_text");
@@ -78,9 +79,8 @@ const hide = document.querySelectorAll("hide");
   var playBtn = document.getElementById("playBtn"); 
     x.play();
     playBtn.classList.add("hide"); 
-    const first = document.getElementById('first');
-    first.style.display = 'grid';
-    document.getElementById('first').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      var section1 = document.querySelector('#section__1');
+  section1.scrollIntoView({ behavior: 'smooth' });  
   } 
 
 
@@ -113,6 +113,25 @@ function countDownTimer() {
     semicircle[0].style.display = 'none';
     semicircle[1].style.display = 'none';
     localStorage.clear("count_timer1");
+
+        const answerBtn3 = document.getElementById('answerBtn--3');
+const answer3 = document.querySelector('#answer3');
+const riddleOne = document.querySelector('.riddle--1')
+const riddleTwo = document.querySelector('.riddle--2')
+const riddleThree = document.querySelector('.riddle--3')
+    answerBtn3.classList.add('hidden--2');
+    riddleOne.classList.add('hidden--2');
+    riddleTwo.classList.add('hidden--2');
+    riddleThree.classList.add('hidden--2');
+    answer3.classList.add('hidden--2');
+    const neonText2 = document.querySelector('.neonText2');
+    neonText2.classList.remove("hidden--2");
+    const section5 = document.querySelector('#section__5');
+    section5.scrollIntoView({ behavior: 'smooth' });
+
+    hid = document.querySelector('.hid--3');
+    hid.style.visibility = 'visible';
+
   } else {
     count_timer1--;
     localStorage.setItem("count_timer1", count_timer1);
@@ -176,6 +195,25 @@ if (count_timer1 <= 0) {
     semicircle[1].style.display = 'none';
     localStorage.clear("count_timer1");
 
+
+    const answerBtn3 = document.getElementById('answerBtn--3');
+const answer3 = document.querySelector('#answer3');
+const riddleOne = document.querySelector('.riddle--1')
+const riddleTwo = document.querySelector('.riddle--2')
+const riddleThree = document.querySelector('.riddle--3')
+    answerBtn3.classList.add('hidden--2');
+    riddleOne.classList.add('hidden--2');
+    riddleTwo.classList.add('hidden--2');
+    riddleThree.classList.add('hidden--2');
+    answer3.classList.add('hidden--2');
+        const neonText2 = document.querySelector('.neonText2');
+    neonText2.classList.remove("hidden--2");
+    const section5 = document.querySelector('#section__5');
+    section5.scrollIntoView({ behavior: 'smooth' });
+
+    hid = document.querySelector('.hid--3');
+    hid.style.visibility = 'visible';
+
 } else {
   count_timer1 = count_timer1 -300; // subtract 5 minutes (300 seconds)
   }
@@ -227,6 +265,27 @@ if(angle < 90){
   cirlceContainer.classList.add('r');
 
 }
+
+  const sacrifice = document.querySelector("#sacrifice");
+  if(sacrifice.classList.contains('open--section--4')) {
+
+
+    hid = document.querySelector('.hid--2');
+    hid.style.visibility = 'visible';
+
+    let circle = document.querySelector('.fa-4');
+    let lock = document.querySelector('#lock--3');
+    let number = document.querySelector('#number--4');
+
+  lock.classList.add('hidden--2');
+  number.classList.remove('hidden--2');
+    circle.classList.add('active');
+        const section4 = document.querySelector('#section__4');
+    section4.scrollIntoView({ behavior: 'smooth' });
+                       x3.play();
+  x2.pause();
+
+  }
 
 });
 

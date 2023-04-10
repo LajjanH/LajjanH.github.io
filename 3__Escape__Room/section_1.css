@@ -1,13 +1,21 @@
+/* Section 1 */
+
+.container--one {
+  justify-content: center;
+  place-content: center;
+  text-align: center;
+}
+
 .time__btn--container {
   color: #fff;
   display: flex;
   position: relative;
   text-decoration: none;
-  padding: 0 5rem;
+  padding: 0 10rem;
   height: 100%;
-  top: -40%;
-  right: -3.5%;
+  top: 30%;
   z-index: 5;
+  margin-top: 13rem;
 }
 
 .timeBtn {
@@ -155,8 +163,8 @@
 
 .question__one {
   position: absolute;
-  top: 70%;
-  left: 45%;
+  top: 80%;
+  left: 42.5%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
   justify-content: center;
@@ -195,8 +203,124 @@
 }
 
 .number {
+  color: #fff;
 }
 
 .hidden--2 {
   display: none;
+}
+
+/* Section 2 */
+
+.selected {
+  color: #8b0000;
+}
+
+/* Section 3 */
+
+.open--section--4 {
+  color: #fff;
+}
+
+/* Section 4 */
+
+.big-cube {
+  width: 500px;
+  height: 500px;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.small-cube {
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.two {
+  background-color: transparent;
+}
+
+.one {
+  background-color: transparent;
+}
+
+.seven {
+  background-color: transparent;
+}
+
+.answerBtn__container1 {
+  display: flex;
+  position: center;
+  justify-content: center;
+  justify-items: center;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+.input__container {
+  justify-content: center;
+  place-content: center;
+  text-align: center;
+  position: center;
+}
+
+.input__section--four {
+  margin-top: 10px;
+  width: 200px;
+  height: 50px;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  -webkit-appearance: none;
+  margin: 0;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+  border-color: -moz-use-text-color #ffffff #ffffff -moz-use-text-color;
+  border-image: none;
+  border-radius: 6px 6px 6px 6px;
+  border-style: none solid solid none;
+  border-width: medium 1px 1px medium;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+  color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.4em;
+  padding: 5px 8px;
+  justify-content: center;
+  place-content: center;
+  text-align: center;
+  position: center;
+}
+
+.input__section--four::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input__section--four::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Section 5 */
+
+.input__container--5 {
+  display: flex;
+  position: center;
+  place-content: center;
+  margin-top: 2rem;
+}
+
+.riddle--1 {
+  color: #a5c9ff;
+}
+
+.riddle--2 {
+  color: #ecffa5;
+}
+
+.riddle--3 {
+  color: #ffa5a5;
 }
