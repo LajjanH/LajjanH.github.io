@@ -327,7 +327,7 @@ svgText3.addEventListener("touchmove", e => {
 });
 
 
-// Same but for desktop //
+// Same but for desktop commented out
 
 svgText.addEventListener("mousedown", e => {
   active = true;
@@ -407,3 +407,5 @@ svgText3.addEventListener("mousemove", e => {
   }
 
 });
+
+//
