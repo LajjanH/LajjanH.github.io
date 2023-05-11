@@ -1,0 +1,20 @@
+{
+  "name": "escaperoom PWA example",
+  "short_name": "escaperoom PWA example",
+  "start_url": "https://lajjanh.github.io/Mobile_Escape_Room/index.html",
+  "background_color": "#1f1f1f",
+  "theme_color": "#1f1f1f",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "images/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
